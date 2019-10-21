@@ -1,0 +1,26 @@
+{
+  "name": "interceptor",
+  "version": "1.0.0",
+  "description": "intercept requests and change route, body, headers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luispmoraisc/intercept_requests_js.git"
+  },
+  "keywords": [
+    "intercept",
+    "requests",
+    "interceptar requisição",
+    "requisição",
+    "redirecionar"
+  ],
+  "author": "Luis Paulo Morais Cardoso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luispmoraisc/intercept_requests_js/issues"
+  },
+  "homepage": "https://github.com/luispmoraisc/intercept_requests_js#readme"
+}
