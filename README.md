@@ -1,5 +1,5 @@
 <h1 align="center">
-    🚦 Interceptor Requests 🕵
+    🚦 Intercept Requests JS 🕵
 </h1>
 
 <h4 align="center">
