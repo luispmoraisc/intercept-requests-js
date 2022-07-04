@@ -113,7 +113,7 @@ attendance team. So, we hadn't time and no made sense in that moment build our o
 microservice that we can send `Elev.io` requests and cache responses to guarantee that content are showing for our
 users. Basically, we create one layer inside our infrastructure to receive `Elev.io` widget requests, send this request
 to `Elev.io` API from our back end and save in cache the response. There is about 3 years that this product is running
-without any problems and receive about 200k of users everyday.
+without any problems and gets around 28 million of views every month.
 
 ## How to contribute
 
