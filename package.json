@@ -49,6 +49,7 @@
     "@microsoft/api-extractor": "^7.28.2",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
+    "babel-eslint": "^10.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.19.0",
     "eslint-config-standard": "^17.0.0",
