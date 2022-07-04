@@ -102,12 +102,18 @@ const listItems: ListItem[] = [
 InterceptRequestsJs(listItems);
 ```
 
-Obviously that isn't the best example, we can't change the return of API because the script will break and we haven't want this happen. But, let me show you a real example:
+Obviously that isn't the best example, we can't change the return of API because the script will break and we haven't
+want this happen. But, let me show you a real example:
 
-At one of my last jobs, we were using [Elev.io](http://elev.io) widget to share articles with our users, and although `Elev.io` is awesome product we had some problems with latency, down API etc and it impacted our users and our attendance team.
-So, we hadn't time and no made sense in that moment build our own widget. We decide to create a microservice that we can send `Elev.io` requests and cache responses to guarantee that content are showing for our users.
-Basically, we create one layer inside our infrastructure to receive `Elev.io` widget requests, send this request to `Elev.io` API from our back end and save in cache the response.
-There is about 3 years that this product is running without any problems and receive about 200k of users everyday.
+## Real usecase
+
+At one of my last jobs, we were using [Elev.io](http://elev.io) widget to share articles with our users, and although
+`Elev.io` is awesome product we had some problems with latency, down API etc and it impacted our users and our
+attendance team. So, we hadn't time and no made sense in that moment build our own widget. We decide to create a
+microservice that we can send `Elev.io` requests and cache responses to guarantee that content are showing for our
+users. Basically, we create one layer inside our infrastructure to receive `Elev.io` widget requests, send this request
+to `Elev.io` API from our back end and save in cache the response. There is about 3 years that this product is running
+without any problems and receive about 200k of users everyday.
 
 ## How to contribute
 
