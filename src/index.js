@@ -16,7 +16,6 @@ function InterceptRequestsJS(array) {
 
   XMLHttpRequest.prototype.open = function (...args) {
     try {
-      console.log(array);
       itemConfig = checkListening(args[1], array);
 
       if (itemConfig) {
@@ -26,7 +25,7 @@ function InterceptRequestsJS(array) {
       }
       cloneOpen.apply(this, arguments);
     } catch (err) {
-      console.log(err);
+      console.log(err); // eslint-disable-line
       cloneOpen.apply(this, arguments);
     }
   };
@@ -38,7 +37,7 @@ function InterceptRequestsJS(array) {
       const { objectRequest, newArguments } = itemConfig.executeBeforeSend(this, arguments);
       cloneSend.apply(objectRequest, newArguments);
     } catch (err) {
-      console.log(err);
+      console.log(err); // eslint-disable-line
       cloneSend.apply(this, args);
     }
   };
