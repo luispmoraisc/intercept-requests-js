@@ -1,5 +1,5 @@
 <h1 align="center">
-    🚦 Intercept Requests JS 🕵
+    Intercept Requests JS
 </h1>
 
 <h4 align="center">
@@ -109,19 +109,14 @@ const listItems: ListItem[] = [
 InterceptRequestsJs(listItems);
 ```
 
-## Como contribuir
+## How to contribute
 
-- Faça um fork desse repositório
-- Cria uma branch com a sua feature: `git checkout -b minha-feature`
-- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`
-- Faça push para a sua branch: `git push origin minha-feature`
+- Make a fork bases in this repository
+- Create a new branch `git checkout -b my-feature`
+- Commit your changes `yarn commit`
+- Push your changes `git push origin my-feature`
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+After the merge of your pull request is done, you can delete your branch
+## 📝 License
 
-## 📝 Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-Este projeto está em constante evolução e refatoração, mande também a sua contribuição.
+This project is based with MIT License. See the file [LICENTE](LICENSE) for more informations.
