@@ -33,7 +33,7 @@
     "build:types": "yarn clean && tsc -p ./tsconfig.json --outDir build && api-extractor run",
     "clean": "rimraf ./build ./dist ./docs ./coverage",
     "test": "jest --watch",
-    "test:coverage": "craco test --watchAll=false --coverage .",
+    "test:coverage": "jest --watchAll=false --coverage .",
     "commit": "git add . && git cz",
     "release:patch": "standard-version - --release-as patch",
     "release:minor": "standard-version - --release-as minor",
