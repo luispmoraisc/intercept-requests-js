@@ -1,26 +1,77 @@
 {
-  "name": "interceptor",
+  "name": "intercept-requests-js",
   "version": "1.0.0",
-  "description": "intercept requests and change route, body, headers",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "intercept requests on your web application and change route, body, headers",
+  "author": "Luis Cardoso <luispmoraisc@gmail.com>",
+  "homepage": "https://github.com/luispmoraisc/intercept_requests_js#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luispmoraisc/intercept_requests_js.git"
   },
+  "license": "MIT",
   "keywords": [
     "intercept",
     "requests",
-    "interceptar requisição",
-    "requisição",
-    "redirecionar"
+    "javascript request",
+    "axios request",
+    "fetch request",
+    "third party request"
   ],
-  "author": "Luis Paulo Morais Cardoso",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/luispmoraisc/intercept_requests_js/issues"
   },
-  "homepage": "https://github.com/luispmoraisc/intercept_requests_js#readme"
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/browser/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "yarn build:types && rollup -c",
+    "build:types": "yarn clean && tsc -p ./tsconfig.json --outDir build && api-extractor run",
+    "clean": "rimraf ./build ./dist ./docs ./coverage",
+    "test": "jest --watch",
+    "test:coverage": "craco test --watchAll=false --coverage .",
+    "commit": "git add . && git cz",
+    "release:patch": "standard-version - --release-as patch",
+    "release:minor": "standard-version - --release-as minor",
+    "release:major": "standard-version - --release-as major"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@microsoft/api-extractor": "^7.28.2",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^8.0.1",
+    "jest-junit": "^14.0.0",
+    "jsdoc": "^3.6.10",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.7",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "jest": "^28.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
