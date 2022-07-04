@@ -1,6 +1,6 @@
 /**
  * Item of list config
- * @typedef {{listening: string, ignore: Array<string>, executeWhenOpen: (context: XMLHttpRequest, args: (string | boolean)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | boolean)[] }, executeBeforeSend: (context: XMLHttpRequest, args: (string | null)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | null)[] } }} ItemConfig
+ * @typedef {{listening: string, ignore: Array<string>, executeWhenOpen: (context: XMLHttpRequest, args: (string | boolean)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | boolean)[] }, executeBeforeSend?: (context: XMLHttpRequest, args: (string | null)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | null)[] } }} ItemConfig
  */
 
 /**

@@ -22,47 +22,94 @@
 </p>
 
 <p align="center">
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-usar">Como usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licença">Licença</a>
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-use">How to use?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-contribuir">How to contribute?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">LICENSE</a>
 </p>
 
-## 💻 Projeto
+## Project
 
-O projeto tem como intuíto interceptar todas as requisições dentro de uma aplicação, para que o dev  tenha mais controle sobre o que é chamado, a forma que é chamado e se necessário fazer redirecionamentos, alterando rota, método, body, headers etc.
+The project `intercept-requests-js` borned by necessity to redirect specific requests of third party scripts for another
+end point.
 
-## 👨‍🏫 Como usar
+Sometimes we need to use third party tools inside our applications as to improve user experience or to give help
+widgets. But, the most time we need to create an integration with those tools and we can't control what those scripts
+are calling of the external world, such as HTTP requests etc.
 
-### Instalação
-Para utilizar em seu projeto basta fazer download via npm:
+With intercept-requests-js you can intercept specific requests by domain, by keyword and the in a near future with
+regex. When you intercept http request, you can redirect it, change headers, change body, or anything else that you want
+before your browser send it.
+
+## How to use
+
+### Install
+
+Install intercept-requests-js by npm:
+
 ```sh
 $ npm i --save intercept-requests-js
 ```
-É importante salientar que o código está em ES6.
 
-### Exemplos
+Or using yarn:
 
-Interceptando todas as requisições que contenham yahoo no domínio e direcionando para o google:
 ```sh
-import { InterceptRequestsJS } from 'intercept-requests-js';
-
-InterceptRequestsJS(
-    [
-        {
-            listening : 'yahoo',
-            ignore : [],
-            redirect : {
-              to : 'www.google.com',
-              concat : false,
-            }
-        }
-    ]
-)
-
+$ yarn add intercept-requests-js
 ```
 
-## 🤔 Como contribuir
+### Configuration
+
+This module will provide a `InterceptRequestsJs` function and `ListItem` that is the type of configuration item. You
+just need to create your `Array<ListItem>` and pass it to the InterceptRequestsJs function like this.
+
+```ts
+import { InterceptRequestsJs, ListItem } from 'intercept-requests-js';
+
+const listItems: ListItem[] = [
+  {
+    listening: 'yahoo',
+    ignore: [],
+    executeWhenOpen: (context: XMLHttpRequest, args: (string | boolean)[]) => {
+      return { objectRequest: context, newArguments: args };
+    },
+    executeBeforeSend: (context: XMLHttpRequest, args: (string | boolean)[]) => {
+      return { objectRequest: context, newArguments: args };
+    },
+  },
+];
+
+InterceptRequestsJs(listItems);
+```
+
+Now, when any request matches with any listening property of `Array<ListItem>`, the methods executeWhenOpen and
+executeBeforeSend will be cally before browser dispatch it, so if you need to change something on intercepted request,
+do it in your methods. For example, let's supose that one widget/script is using some yahoo service and I want to
+redirect this search for google, I can do it like this:
+
+Intercept all requests that contain yahoo in your domain and redirect to google:
+
+```ts
+import { InterceptRequestsJS, ListItem } from 'intercept-requests-js';
+
+const executeWhenOpen = (context: XMLHttpRequest, args: (string | boolean)[]) => {
+  const newArguments = ['GET', 'http://google.com', args[2]];
+
+  return { objectRequest: context, newArguments };
+};
+
+const listItems: ListItem[] = [
+  {
+    listening: 'yahoo',
+    ignore: [],
+    executeWhenOpen: (context: XMLHttpRequest, args: (string | boolean)[]) => {
+      return { objectRequest: context, newArguments: args };
+    },
+  },
+];
+InterceptRequestsJs(listItems);
+```
+
+## Como contribuir
 
 - Faça um fork desse repositório
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`

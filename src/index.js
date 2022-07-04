@@ -2,7 +2,7 @@ import { checkListening } from './filters';
 
 /**
  * Item of list config
- * @typedef {{listening: string, ignore: Array<string>, executeWhenOpen: (context: XMLHttpRequest, args: (string | boolean)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | boolean)[] }, executeBeforeSend: (context: XMLHttpRequest, args: (string | null)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | null)[] } }} ItemConfig
+ * @typedef {{listening: string, ignore: Array<string>, executeWhenOpen: (context: XMLHttpRequest, args: (string | boolean)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | boolean)[] }, executeBeforeSend?: (context: XMLHttpRequest, args: (string | null)[]) => { objectRequest: XMLHttpRequest, newArguments: (string | null)[] } }} ItemConfig
  */
 
 /**
@@ -32,9 +32,10 @@ function InterceptRequestsJS(array) {
 
   XMLHttpRequest.prototype.send = function (...args) {
     try {
-      if (!itemConfig) return cloneSend.apply(this, args);
+      if (!itemConfig || !itemConfig.executeBeforeSend) return cloneSend.apply(this, args);
 
       const { objectRequest, newArguments } = itemConfig.executeBeforeSend(this, arguments);
+
       cloneSend.apply(objectRequest, newArguments);
     } catch (err) {
       console.log(err); // eslint-disable-line
