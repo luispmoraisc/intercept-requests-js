@@ -21,13 +21,6 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-<p align="center">
-  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-how-to-use">How to use?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-contribuir">How to contribute?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licença">LICENSE</a>
-</p>
-
 ## Project
 
 The project `intercept-requests-js` borned by necessity to redirect specific requests of third party scripts for another
@@ -117,6 +110,7 @@ InterceptRequestsJs(listItems);
 - Push your changes `git push origin my-feature`
 
 After the merge of your pull request is done, you can delete your branch
+
 ## 📝 License
 
-This project is based with MIT License. See the file [LICENTE](LICENSE) for more informations.
+This project is based with MIT License. See the file [LICENSE](LICENSE) for more informations.
