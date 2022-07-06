@@ -125,40 +125,25 @@ With Intercept Requests JS
 
 ![Image of archteture after use Intercept Requests JS](./assets/after.png)
 
-### Types
+### Describe types
 
-```ts
-export declare type ItemConfig = {
-  listening: string;
-  ignore: Array<string>;
-  executeWhenOpen: (
-    context: XMLHttpRequest,
-    args: (string | boolean)[]
-  ) => {
-    objectRequest: XMLHttpRequest;
-    newArguments: (string | boolean)[];
-  };
-  executeBeforeSend?:
-    | ((
-        context: XMLHttpRequest,
-        args: (string | null)[]
-      ) => {
-        objectRequest: XMLHttpRequest;
-        newArguments: (string | null)[];
-      })
-    | undefined;
-};
-```
+| Property          | Type                                                 | Description                                                                      | Optional |
+| ----------------- | ---------------------------------------------------- | -------------------------------------------------------------------------------- | -------- |
+| listening         | string                                               | Name of domain, keyword, etc that we can get specific request                    | false    |
+| ignore            | string[]                                             | List of words that we should ignore if url include                               | false    |
+| executeWhenOpen   | (context: XMLHttpRequest, args: (string\|boolean)[]) | context is the current request, args are the current arguments passed to request | false    |
+| executeBeforeSend | (context: XMLHttpRequest, args: (string\|boolean)[]) | context is the current request, args are the current arguments passed to request | true     |
 
 ### Caution!
 
-The methods `executeWhenOpen` and `executeBeforeSend` receive `args` parameter and the values needs to follow this sequency:
+The methods `executeWhenOpen` and `executeBeforeSend` receive `args` parameter and the values needs to follow this
+sequency:
 
-`executeWhenOpen`: ['http method', 'URL']
-For more information see the page of [XMLHttpRequest.open](https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest/open)
+`executeWhenOpen`: ['http method', 'URL'] For more information see the page of
+[XMLHttpRequest.open](https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest/open)
 
-`executeBeforeSend`: ['body']
-For more information see the page of [XMLHttpRequest.send](https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest/send)
+`executeBeforeSend`: ['body'] For more information see the page of
+[XMLHttpRequest.send](https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest/send)
 
 ## Next steps
 
