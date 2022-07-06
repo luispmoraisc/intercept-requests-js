@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo.png" alt="Logo Intercept Requests JS" width="150"/>
+  <img src="https://github.com/luispmoraisc/intercept-requests-js/blob/master/assets/logo.png" alt="Logo Intercept Requests JS" width="150"/>
 </p>
 <h1 align="center">
     Intercept Requests JS
@@ -119,11 +119,11 @@ product is running without any problems and gets around 28 million views every m
 
 Without Intercept Requests JS
 
-![Image of archteture before use Intercept Requests JS](./assets/before.png)
+![Image of archteture before use Intercept Requests JS](https://github.com/luispmoraisc/intercept-requests-js/blob/master/assets/before.png)
 
 With Intercept Requests JS
 
-![Image of archteture after use Intercept Requests JS](./assets/after.png)
+![Image of archteture after use Intercept Requests JS](https://github.com/luispmoraisc/intercept-requests-js/blob/master/assets/after.png)
 
 ### Describe types
 
