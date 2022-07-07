@@ -9,16 +9,16 @@
     ☕ Code and coffee
 </h4>
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/luispmoraisc/intercept_requests_js?style=for-the-badge">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/luispmoraisc/intercept-requests-js?style=for-the-badge">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/luispmoraisc/intercept_requests_js?style=for-the-badge">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/luispmoraisc/intercept-requests-js?style=for-the-badge">
   
-  <a href="https://github.com/luispmoraisc/intercept_requests_js/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/luispmoraisc/intercept_requests_js/master?style=for-the-badge">
+  <a href="https://github.com/luispmoraisc/intercept-requests-js/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/luispmoraisc/intercept-requests-js/master?style=for-the-badge">
   </a>
 
-  <a href="https://github.com/luispmoraisc/intercept_requests_js/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/luispmoraisc/intercept_requests_js?style=for-the-badge">
+  <a href="https://github.com/luispmoraisc/intercept-requests-js/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/luispmoraisc/intercept-requests-js?style=for-the-badge">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
