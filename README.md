@@ -147,11 +147,11 @@ sequency:
 
 ## Examples
 
-- [Simple Redirect](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/simpleRedirect.js)
-- [Change Body](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/changeBody.js)
-- [Change Headers](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/changeHeader.js)
-- [Change Method](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/changeMethod.js)
-- [Concat URLs](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/concatUrls.js)
+- [Simple Redirect](https://github.com/luispmoraisc/intercept-requests-js/blob/docs/create-examples/examples/changeBody.js)
+- [Change Body](https://github.com/luispmoraisc/intercept-requests-js/blob/docs/create-examples/examples/changeBody.js)
+- [Change Headers](https://github.com/luispmoraisc/intercept-requests-js/blob/docs/create-examples/examples/changeHeader.js)
+- [Change Method](https://github.com/luispmoraisc/intercept-requests-js/blob/docs/create-examples/examples/changeMethod.js)
+- [Concat URLs](https://github.com/luispmoraisc/intercept-requests-js/blob/docs/create-examples/examples/concatUrls.js)
 
 ## Next steps
 
