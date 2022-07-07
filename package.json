@@ -1,6 +1,6 @@
 {
   "name": "intercept-requests-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "intercept requests on your web application and change route, body, headers",
   "author": "Luis Cardoso <luispmoraisc@gmail.com>",
   "homepage": "https://github.com/luispmoraisc/intercept-requests-js#readme",
