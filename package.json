@@ -3,10 +3,10 @@
   "version": "1.0.1",
   "description": "intercept requests on your web application and change route, body, headers",
   "author": "Luis Cardoso <luispmoraisc@gmail.com>",
-  "homepage": "https://github.com/luispmoraisc/intercept_requests_js#readme",
+  "homepage": "https://github.com/luispmoraisc/intercept-requests-js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luispmoraisc/intercept_requests_js.git"
+    "url": "git+https://github.com/luispmoraisc/intercept-requests-js.git"
   },
   "license": "MIT",
   "keywords": [
@@ -18,7 +18,7 @@
     "third party request"
   ],
   "bugs": {
-    "url": "https://github.com/luispmoraisc/intercept_requests_js/issues"
+    "url": "https://github.com/luispmoraisc/intercept-requests-js/issues"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
