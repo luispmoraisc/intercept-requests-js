@@ -145,11 +145,18 @@ sequency:
 `executeBeforeSend`: ['body'] For more information see the page of
 [XMLHttpRequest.send](https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHttpRequest/send)
 
+## Examples
+
+- [Simple Redirect](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/simpleRedirect.js)
+- [Change Body](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/changeBody.js)
+- [Change Headers](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/changeHeader.js)
+- [Change Method](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/changeMethod.js)
+- [Concat URLs](https://github.com/luispmoraisc/intercept-requests-js/blob/master/examples/concatUrls.js)
+
 ## Next steps
 
 - Enable Regex.
 - Provide a method to change API response value.
-- Create example codes
 
 ## How to contribute
 
